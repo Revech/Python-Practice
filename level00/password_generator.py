@@ -18,27 +18,27 @@ user_digits= int(input("how many numbers would you like? "))
 
 new_list = []
 
+password = ""
+
+total = user_digits + user_letters + user_symbols
 
 
-x =0 
-for i in letters:
-    x += 1
-    if (x <= user_letters):
+for i in range(0, total ):
+        
+    if(user_letters != 0):
+        user_letters -= 1
         new_list.append(random.choice(letters))
-x= 0
-for i in symbols:
-    x += 1
-    if (x <= user_symbols):
+        
+    if(user_symbols != 0):
+        user_symbols -= 1
         new_list.append(random.choice(symbols))
-x = 0
-for i in digits:
-    x += 1
-    if (x <= user_digits):
+    if(user_digits != 0):
+        user_digits -= 1
         new_list.append(random.choice(digits))
+
 
 for word in new_list:
     print(word, end="")
-
 
 #########################
 """
